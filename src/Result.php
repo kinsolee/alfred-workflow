@@ -28,6 +28,8 @@ class Result
 
     protected $mods = [];
 
+    protected $variables = [];
+
     /**
      * @param bool $valid
      *
@@ -245,6 +247,7 @@ class Result
             'icon',
             'mods',
             'text',
+            'variables'
         ];
 
         $result = [];

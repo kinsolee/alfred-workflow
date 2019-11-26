@@ -1,11 +1,15 @@
 {
-    "name": "joetannenbaum/alfred-workflow",
+    "name": "kinsolee/alfred-workflow",
     "description": "PHP helper for creating Alfred Workflows.",
     "license": "MIT",
     "authors": [
         {
             "name": "Joe Tannenbaum",
             "email": "joe@joe.codes"
+        },
+        {
+            "name" : "Kinso Lee",
+            "email": "kinso@kinso.in"
         }
     ],
     "require": {

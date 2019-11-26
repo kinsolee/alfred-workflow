@@ -71,11 +71,11 @@ class Workflow
             return $this;
         }
 
-        $query = (string) $query;
+        $query = (string)$query;
 
         $this->results = array_filter($this->results, function ($result) use ($query, $property) {
-                return stristr($result->$property, $query) !== false;
-            });
+            return stristr($result->$property, $query) !== false;
+        });
 
         return $this;
     }
@@ -89,14 +89,14 @@ class Workflow
     {
         $output = [
             'items' => array_map(function ($result) {
-                            return $result->toArray();
-                        }, array_values($this->results)),
+                return $result->toArray();
+            }, array_values($this->results)),
         ];
 
-        if(!empty($this->variables)){
+        if (!empty($this->variables)) {
             $output['variables'] = $this->variables;
         };
 
-        return json_encode($output);
+        return json_encode($output, JSON_UNESCAPED_UNICODE);
     }
 }
